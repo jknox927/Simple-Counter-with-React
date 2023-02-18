@@ -5,9 +5,9 @@ import { SecondsCounter } from "./SecondsCounter.jsx";
 //create your first component
 const Home = () => {
 	const [counter, setCounter] = useState(0);
-    const [counterStr, setCounterStr] = useState(counter.toString().padStart(6, "0"));
-    const [countDown, setCountDown] = useState(0);
-    const [alertTarget, setAlertTarget] = useState(0);
+    	const [counterStr, setCounterStr] = useState(counter.toString().padStart(6, "0"));
+    	const [countDown, setCountDown] = useState(0);
+    	const [alertTarget, setAlertTarget] = useState(0);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -34,12 +34,12 @@ const Home = () => {
 		<div className="text-center">
 			<SecondsCounter counterStr = {counterStr} />
 			<input className="input" placeholder="Enter a Number" type="number" onChange={e => setCountDown(parseInt(e.target.value))} />
-            <input className="input" placeholder="Alert" type="number" onChange={e => setAlertTarget(parseInt(e.target.value))} />
-            <div className="btn-container">
-                <button className="buttons">Stop</button>
-                <button className="buttons">Reset</button>
-                <button className="buttons">Resume</button>
-            </div>
+            		<input className="input" placeholder="Alert" type="number" onChange={e => setAlertTarget(parseInt(e.target.value))} />
+            		<div className="btn-container">
+				<button className="buttons">Stop</button>
+				<button className="buttons">Reset</button>
+				<button className="buttons">Resume</button>
+            		</div>
 		</div>
 	);
 };
